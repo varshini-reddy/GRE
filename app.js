@@ -79,6 +79,10 @@ function switchTab(name) {
   if (name === 'quant' && !document.getElementById('quant-list').children.length) {
     renderQuant('');
   }
+  if (name === 'sort' && typeof showGameSetup === 'function') {
+    // If no game is in progress, show the setup screen
+    if (typeof gameState === 'undefined' || !gameState) showGameSetup();
+  }
 }
 
 document.querySelectorAll('.tab').forEach(t => {
@@ -919,13 +923,3 @@ document.addEventListener('mouseup', e => {
   if (!dragObj) return;
   endDragAt(e.clientX, e.clientY);
 });
-
-// ─── Hook Sort tab into switchTab ────────────────────────────
-
-const _origSwitchTab = switchTab;
-switchTab = function(name) {
-  _origSwitchTab(name);
-  if (name === 'sort') {
-    if (!gameState) showGameSetup();
-  }
-};

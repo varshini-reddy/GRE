@@ -1228,8 +1228,35 @@
 <!-- Service worker registration -->
 <script>
   if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('sw.js').catch(() => {});
+    window.addEventListener('load', async () => {
+      try {
+        const reg = await navigator.serviceWorker.register('sw.js');
+        // Check for updates every time the page loads
+        reg.update().catch(() => {});
+
+        // When a new worker is installed AND ready to take over,
+        // it will fire 'controllerchange' when it activates.
+        // Reload the page once so the user sees the fresh code immediately.
+        let refreshing = false;
+        navigator.serviceWorker.addEventListener('controllerchange', () => {
+          if (refreshing) return;
+          refreshing = true;
+          window.location.reload();
+        });
+
+        // If a new SW is waiting (because the old one still controls the page),
+        // ask it to skip waiting and activate now.
+        if (reg.waiting) reg.waiting.postMessage('skipWaiting');
+        reg.addEventListener('updatefound', () => {
+          const newSW = reg.installing;
+          if (!newSW) return;
+          newSW.addEventListener('statechange', () => {
+            if (newSW.state === 'installed' && navigator.serviceWorker.controller) {
+              newSW.postMessage('skipWaiting');
+            }
+          });
+        });
+      } catch (e) { /* SW not available; app still works */ }
     });
   }
 </script>
