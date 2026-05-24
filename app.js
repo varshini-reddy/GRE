@@ -553,11 +553,42 @@ const GAME_CONFIGS = [
   { label: 'Easy',   clusters: 3, wordsEach: 3 },
   { label: 'Medium', clusters: 4, wordsEach: 4 },
   { label: 'Hard',   clusters: 5, wordsEach: 5 },
+  { label: 'Custom', clusters: 4, wordsEach: 4 },   // values updated by steppers
 ];
+const CUSTOM_BOUNDS = {
+  clusters: { min: 2, max: 8 },
+  words:    { min: 2, max: 6 },
+};
+const CUSTOM_KEY = 'gre-sort-custom-v1';
 let gameCfgIdx = 0;
 let gameState  = null;   // active game
 let dragObj    = null;   // active drag { wordIdx, ghost, chip }
 const GAME_HISTORY_KEY = 'gre-sort-history-v1';
+
+// Load saved custom values
+let customClusters = 4, customWords = 4;
+try {
+  const raw = localStorage.getItem(CUSTOM_KEY);
+  if (raw) {
+    const saved = JSON.parse(raw);
+    customClusters = clampVal(saved.clusters, CUSTOM_BOUNDS.clusters);
+    customWords    = clampVal(saved.words,    CUSTOM_BOUNDS.words);
+  }
+} catch (e) { /* ignore */ }
+GAME_CONFIGS[3].clusters  = customClusters;
+GAME_CONFIGS[3].wordsEach = customWords;
+
+function clampVal(v, b) {
+  v = parseInt(v);
+  if (!Number.isFinite(v)) return b.min;
+  return Math.max(b.min, Math.min(b.max, v));
+}
+
+function persistCustom() {
+  try {
+    localStorage.setItem(CUSTOM_KEY, JSON.stringify({ clusters: customClusters, words: customWords }));
+  } catch (e) { /* ignore */ }
+}
 
 // ─── Difficulty selection ────────────────────────────────────
 
@@ -568,7 +599,50 @@ document.getElementById('diff-row').addEventListener('click', e => {
   document.querySelectorAll('.diff-btn').forEach((b, i) => {
     b.classList.toggle('active', i === gameCfgIdx);
   });
+  // Show/hide custom controls
+  document.getElementById('custom-controls').style.display =
+    (gameCfgIdx === 3) ? 'block' : 'none';
 });
+
+// ─── Stepper logic ───────────────────────────────────────────
+
+function refreshCustomUI() {
+  document.getElementById('custom-clusters-val').textContent = customClusters;
+  document.getElementById('custom-words-val').textContent    = customWords;
+  const total = customClusters * customWords;
+  document.getElementById('custom-total').textContent  = `${total} total words`;
+  document.getElementById('custom-meta').textContent   =
+    `${customClusters} × ${customWords} = ${total} words`;
+
+  // Disable steppers at bounds
+  document.querySelectorAll('#custom-controls .step-btn').forEach(btn => {
+    const target = btn.dataset.target;
+    const step   = parseInt(btn.dataset.step);
+    const cur    = target === 'clusters' ? customClusters : customWords;
+    const bounds = target === 'clusters' ? CUSTOM_BOUNDS.clusters : CUSTOM_BOUNDS.words;
+    btn.disabled = (step < 0 && cur <= bounds.min) || (step > 0 && cur >= bounds.max);
+  });
+
+  GAME_CONFIGS[3].clusters  = customClusters;
+  GAME_CONFIGS[3].wordsEach = customWords;
+}
+
+document.getElementById('custom-controls').addEventListener('click', e => {
+  const btn = e.target.closest('.step-btn');
+  if (!btn || btn.disabled) return;
+  const target = btn.dataset.target;
+  const step   = parseInt(btn.dataset.step);
+  if (target === 'clusters') {
+    customClusters = clampVal(customClusters + step, CUSTOM_BOUNDS.clusters);
+  } else {
+    customWords = clampVal(customWords + step, CUSTOM_BOUNDS.words);
+  }
+  persistCustom();
+  refreshCustomUI();
+});
+
+// Initialise stepper UI on load
+refreshCustomUI();
 
 // ─── Build a round ───────────────────────────────────────────
 

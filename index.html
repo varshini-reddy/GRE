@@ -811,6 +811,68 @@
   .diff-meta { font-size: 12px; color: var(--muted); }
   .diff-btn.active .diff-meta { color: rgba(200,245,66,0.7); }
 
+  /* Custom controls */
+  #custom-controls {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 4px 16px;
+    margin-top: 10px;
+  }
+  .stepper-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .stepper-row:last-of-type { border-bottom: none; }
+  .stepper-label {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text);
+  }
+  .stepper {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .step-btn {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 1.5px solid var(--border-strong);
+    background: var(--card);
+    color: var(--text);
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.15s;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .step-btn:hover:not(:disabled) { border-color: var(--text); }
+  .step-btn:active:not(:disabled) { background: var(--bg); transform: scale(0.95); }
+  .step-btn:disabled { opacity: 0.25; cursor: not-allowed; }
+  .step-val {
+    font-family: 'DM Serif Display', serif;
+    font-size: 22px;
+    min-width: 28px;
+    text-align: center;
+    color: var(--text);
+  }
+  .custom-total {
+    text-align: center;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    padding: 10px 0 12px;
+    border-top: 1px solid var(--border);
+  }
+
   /* Game header */
   .game-hdr {
     display: flex;
@@ -1154,6 +1216,30 @@
               <div class="diff-label">Hard</div>
               <div class="diff-meta">5 clusters · 5 words each · 25 total</div>
             </button>
+            <button class="diff-btn" data-idx="3">
+              <div class="diff-label">Custom</div>
+              <div class="diff-meta" id="custom-meta">Pick your own</div>
+            </button>
+          </div>
+
+          <div id="custom-controls" style="display:none;">
+            <div class="stepper-row">
+              <div class="stepper-label">Clusters</div>
+              <div class="stepper">
+                <button class="step-btn" data-step="-1" data-target="clusters" aria-label="Fewer clusters">−</button>
+                <div class="step-val" id="custom-clusters-val">4</div>
+                <button class="step-btn" data-step="1" data-target="clusters" aria-label="More clusters">+</button>
+              </div>
+            </div>
+            <div class="stepper-row">
+              <div class="stepper-label">Words per cluster</div>
+              <div class="stepper">
+                <button class="step-btn" data-step="-1" data-target="words" aria-label="Fewer words">−</button>
+                <div class="step-val" id="custom-words-val">4</div>
+                <button class="step-btn" data-step="1" data-target="words" aria-label="More words">+</button>
+              </div>
+            </div>
+            <div class="custom-total" id="custom-total">16 total words</div>
           </div>
 
           <button class="start-btn" id="game-start-btn" style="margin-top:1rem;">Start Game</button>
