@@ -1,5 +1,5 @@
 // Simple cache-first service worker for offline use
-const CACHE = 'gre-study-v1';
+const CACHE = 'gre-study-v2';
 const ASSETS = [
   './',
   './index.html',
