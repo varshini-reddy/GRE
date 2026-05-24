@@ -1,10 +1,6 @@
-// GregMat GRE Vocab — 37 groups × 30 words = 1,110 words
-// Definitions distilled from the official GregMat list; examples written for context.
+// GregMat GRE Vocab — definitions and examples (duplicates removed)
 
 const VOCAB = [
-  // ═══════════════════════════════════════════════════════════════
-  // GROUP 1
-  // ═══════════════════════════════════════════════════════════════
   { g: 1, w: "abound", d: "be present in large quantities", e: "Wildflowers abound in the meadow each spring." },
   { g: 1, w: "amorphous", d: "lacking structure; unclear", e: "The committee returned an amorphous proposal with no clear deadlines." },
   { g: 1, w: "austere", d: "(of a person) strict and stern; (of conditions) lacking luxury, extremely harsh", e: "The monks lived an austere life of bread, water, and silence." },
@@ -35,10 +31,6 @@ const VOCAB = [
   { g: 1, w: "spendthrift", d: "someone who spends money recklessly", e: "A spendthrift heir burned through the inheritance in two years." },
   { g: 1, w: "taciturn", d: "of few words; speaking little", e: "Our taciturn neighbor nodded hello but never stopped to chat." },
   { g: 1, w: "wary", d: "exercising caution; careful", e: "Be wary of emails asking for your bank details." },
-
-  // ═══════════════════════════════════════════════════════════════
-  // GROUP 2
-  // ═══════════════════════════════════════════════════════════════
   { g: 2, w: "adulterate", d: "damage the quality of; corrupt", e: "The factory was caught adulterating the olive oil with cheaper substitutes." },
   { g: 2, w: "advocate", d: "support; be in favor of; one who supports a cause", e: "She is a vocal advocate for affordable housing." },
   { g: 2, w: "aggrandize", d: "enhance one's power or standing", e: "He used the merger to aggrandize his own influence." },
@@ -69,10 +61,6 @@ const VOCAB = [
   { g: 2, w: "diatribe", d: "an angry rant; verbal abuse", e: "He launched into a diatribe about modern phones." },
   { g: 2, w: "incredulous", d: "doubtful and disbelieving", e: "She gave him an incredulous look when he claimed he'd run a marathon." },
   { g: 2, w: "ingenuous", d: "naive and lacking experience", e: "His ingenuous trust in strangers worried his family." },
-
-  // ═══════════════════════════════════════════════════════════════
-  // GROUP 3
-  // ═══════════════════════════════════════════════════════════════
   { g: 3, w: "abate", d: "decrease in intensity; lessen", e: "The storm abated by morning." },
   { g: 3, w: "abjure", d: "strongly reject (an idea); forgo", e: "She abjured her old beliefs after years of study." },
   { g: 3, w: "anomalous", d: "differing from what is normal; atypical", e: "Scientists flagged the anomalous reading for review." },
@@ -103,10 +91,6 @@ const VOCAB = [
   { g: 3, w: "polarize", d: "separate into two opposing groups", e: "The proposal polarized the council along party lines." },
   { g: 3, w: "prodigal", d: "carelessly wasteful; extravagant", e: "His prodigal spending exhausted the family fortune." },
   { g: 3, w: "verbose", d: "excessively talkative; wordy", e: "The verbose memo could have been a single paragraph." },
-
-  // ═══════════════════════════════════════════════════════════════
-  // GROUP 4
-  // ═══════════════════════════════════════════════════════════════
   { g: 4, w: "abstain", d: "avoid taking part in something", e: "She decided to abstain from the vote." },
   { g: 4, w: "approbation", d: "appreciation toward someone", e: "Her debut earned wide critical approbation." },
   { g: 4, w: "cherish", d: "greatly love or protect something", e: "He cherished the letter from his grandmother." },
@@ -137,10 +121,6 @@ const VOCAB = [
   { g: 4, w: "scrupulous", d: "careful with details; possessing moral integrity", e: "The accountant kept scrupulous records." },
   { g: 4, w: "tranquil", d: "peaceful; free from activity", e: "The garden was a tranquil escape from the city." },
   { g: 4, w: "vacillate", d: "go back and forth with one's view", e: "He vacillated between accepting and declining the offer." },
-
-  // ═══════════════════════════════════════════════════════════════
-  // GROUP 5
-  // ═══════════════════════════════════════════════════════════════
   { g: 5, w: "aloof", d: "not warm or friendly; impersonal", e: "The new manager seemed aloof at first but warmed up over weeks." },
   { g: 5, w: "clangor", d: "a disturbingly loud noise", e: "The clangor of the church bells woke the whole street." },
   { g: 5, w: "conventional", d: "adhering to established practices or accepted standards", e: "She rejected conventional career advice and started her own firm." },
@@ -171,10 +151,6 @@ const VOCAB = [
   { g: 5, w: "utterly", d: "completely; absolutely", e: "She was utterly exhausted after the double shift." },
   { g: 5, w: "weary", d: "feeling tired or exhausted", e: "He grew weary of the long debates over wording." },
   { g: 5, w: "zealous", d: "intensely passionate", e: "She is a zealous defender of public libraries." },
-
-  // ═══════════════════════════════════════════════════════════════
-  // GROUP 6
-  // ═══════════════════════════════════════════════════════════════
   { g: 6, w: "admonish", d: "scold someone seriously; give urgent advice", e: "The judge admonished the witness for outbursts." },
   { g: 6, w: "aesthetic", d: "pertaining to beauty or the appreciation thereof", e: "The cafe's minimalist aesthetic was Instagram-perfect." },
   { g: 6, w: "affectation", d: "a pretense or show meant to impress others", e: "His British accent was a pure affectation." },
@@ -205,10 +181,6 @@ const VOCAB = [
   { g: 6, w: "underscore", d: "emphasize or show the importance of something", e: "The accident underscored the need for better safety training." },
   { g: 6, w: "venal", d: "open to bribery or corruption", e: "The venal official accepted envelopes from every contractor." },
   { g: 6, w: "venerate", d: "regard with deep respect or reverence", e: "Architects still venerate Frank Lloyd Wright's work." },
-
-  // ═══════════════════════════════════════════════════════════════
-  // GROUP 7
-  // ═══════════════════════════════════════════════════════════════
   { g: 7, w: "appease", d: "calm someone down; satisfy a demand or desire", e: "He gave the dog a treat to appease its whining." },
   { g: 7, w: "arbitrary", d: "determined by chance, not reason", e: "The choice of font seemed arbitrary." },
   { g: 7, w: "archaic", d: "ancient or outmoded; out of date", e: "The system uses an archaic file format no one recognizes." },
@@ -239,10 +211,6 @@ const VOCAB = [
   { g: 7, w: "soporific", d: "causing sleep or lethargy", e: "The lecture was so soporific that half the room dozed off." },
   { g: 7, w: "stern", d: "hard, harsh, or severe in manner", e: "The principal gave them a stern warning about lateness." },
   { g: 7, w: "tendentious", d: "biased toward a particular view, often provocatively", e: "Critics called the documentary tendentious and one-sided." },
-
-  // ═══════════════════════════════════════════════════════════════
-  // GROUP 8
-  // ═══════════════════════════════════════════════════════════════
   { g: 8, w: "accentuate", d: "give emphasis or draw attention to something", e: "The lighting accentuated the painting's vivid colors." },
   { g: 8, w: "conjectural", d: "pertaining to a guess or inference with limited data", e: "His theory remained conjectural until the new evidence appeared." },
   { g: 8, w: "convivial", d: "demonstrating a jovial nature or fondness for festivities", e: "The dinner had a convivial atmosphere from the first course." },
@@ -273,10 +241,6 @@ const VOCAB = [
   { g: 8, w: "trivial", d: "of minor significance or value", e: "Don't waste time on trivial details." },
   { g: 8, w: "utilitarian", d: "emphasizing practicality and functionality over aesthetics", e: "The office had a utilitarian look — function first, beauty later." },
   { g: 8, w: "vapid", d: "uninteresting, lacking flavor or spark", e: "The conversation was vapid and went nowhere." },
-
-  // ═══════════════════════════════════════════════════════════════
-  // GROUP 9
-  // ═══════════════════════════════════════════════════════════════
   { g: 9, w: "boorish", d: "rude or unrefined in manners or behavior", e: "His boorish behavior at dinner embarrassed the host." },
   { g: 9, w: "brook", d: "tolerate or endure something, especially an annoyance", e: "The director will brook no further delays." },
   { g: 9, w: "circumspect", d: "cautious or wary, especially considering consequences", e: "Be circumspect in what you share publicly online." },
@@ -307,10 +271,6 @@ const VOCAB = [
   { g: 9, w: "tact", d: "skill in handling difficult situations without offense", e: "She delivered the bad news with great tact." },
   { g: 9, w: "trifling", d: "lacking significance or importance", e: "Don't bother me with trifling concerns right now." },
   { g: 9, w: "turbulent", d: "full of conflict or chaos", e: "The country went through a turbulent decade." },
-
-  // ═══════════════════════════════════════════════════════════════
-  // GROUP 10
-  // ═══════════════════════════════════════════════════════════════
   { g: 10, w: "acumen", d: "quickness and keenness in understanding and judgment", e: "Her business acumen turned the failing store around." },
   { g: 10, w: "antithesis", d: "the direct opposite or contrast", e: "His calm demeanor was the antithesis of his brother's." },
   { g: 10, w: "ascribe", d: "attribute or credit something to a particular cause or source", e: "Historians ascribe the empire's decline to several factors." },
@@ -341,10 +301,6 @@ const VOCAB = [
   { g: 10, w: "supersede", d: "replace or take the place of", e: "The new policy supersedes all earlier guidelines." },
   { g: 10, w: "tout", d: "promote or praise energetically", e: "The ad touted the product as revolutionary." },
   { g: 10, w: "wane", d: "decrease in power, size, or intensity", e: "His enthusiasm for the project began to wane." },
-
-  // ═══════════════════════════════════════════════════════════════
-  // GROUP 11
-  // ═══════════════════════════════════════════════════════════════
   { g: 11, w: "abhor", d: "detest or regard with deep hatred", e: "She abhors any form of dishonesty." },
   { g: 11, w: "boisterous", d: "energetic, noisy, and lively", e: "The boisterous crowd cheered every play." },
   { g: 11, w: "chivalrous", d: "honorable and polite", e: "His chivalrous gesture of offering his seat stood out." },
@@ -375,10 +331,6 @@ const VOCAB = [
   { g: 11, w: "sluggish", d: "lacking energy; slow and listless", e: "The market has been sluggish all month." },
   { g: 11, w: "spartan", d: "marked by simplicity, frugality, avoidance of luxury", e: "His spartan apartment had only a bed and a desk." },
   { g: 11, w: "truculent", d: "aggressively combative or confrontational", e: "The truculent customer demanded to see the manager." },
-
-  // ═══════════════════════════════════════════════════════════════
-  // GROUP 12
-  // ═══════════════════════════════════════════════════════════════
   { g: 12, w: "acrimonious", d: "bitter and sharp in language or tone", e: "Their acrimonious divorce dragged on for years." },
   { g: 12, w: "belligerent", d: "argumentative, threatening, or aggressive", e: "His belligerent tone got him removed from the meeting." },
   { g: 12, w: "beneficent", d: "kind and charitable, producing good results", e: "The beneficent foundation funded scholarships for decades." },
@@ -409,10 +361,6 @@ const VOCAB = [
   { g: 12, w: "urbane", d: "refined, sophisticated, and courteous", e: "Our urbane host put everyone instantly at ease." },
   { g: 12, w: "verisimilitude", d: "appearance or semblance of truth; believability", e: "Period costumes gave the film an air of verisimilitude." },
   { g: 12, w: "vitiate", d: "impair or corrupt the quality of something", e: "Even a small error could vitiate the entire experiment." },
-
-  // ═══════════════════════════════════════════════════════════════
-  // GROUP 13
-  // ═══════════════════════════════════════════════════════════════
   { g: 13, w: "affinity", d: "a natural liking or connection; a similarity between two things", e: "She had a natural affinity for languages." },
   { g: 13, w: "altruistic", d: "showing generosity and concern for the welfare of others", e: "His altruistic work in the community went mostly unrecognized." },
   { g: 13, w: "baroque", d: "overly detailed or ornamental", e: "The ceiling had a baroque design of swirling vines." },
@@ -443,10 +391,6 @@ const VOCAB = [
   { g: 13, w: "scathing", d: "harshly or bitterly critical; vitriolic", e: "The review was scathing from the first sentence." },
   { g: 13, w: "subtle", d: "delicate or slight; not obvious", e: "There was a subtle change in the flavor with the new spice." },
   { g: 13, w: "superficial", d: "on the surface; not profound or thorough", e: "His knowledge of the topic was only superficial." },
-
-  // ═══════════════════════════════════════════════════════════════
-  // GROUP 14
-  // ═══════════════════════════════════════════════════════════════
   { g: 14, w: "acquiesce", d: "agree or consent quietly without objection", e: "Rather than argue, he acquiesced to the new schedule." },
   { g: 14, w: "adroit", d: "deft, dexterous, or skillful", e: "She gave an adroit response to the tricky question." },
   { g: 14, w: "amend", d: "make changes, usually to improve", e: "Congress amended the bill before final passage." },
@@ -477,10 +421,6 @@ const VOCAB = [
   { g: 14, w: "umbrage", d: "a feeling of anger caused by something offensive", e: "He took umbrage at being left off the invitation." },
   { g: 14, w: "versatile", d: "having varied uses or many functions; capable of many things", e: "She's a versatile actor, comfortable in any genre." },
   { g: 14, w: "wayward", d: "obstinate, contrary and unpredictable", e: "Their wayward son finally returned home." },
-
-  // ═══════════════════════════════════════════════════════════════
-  // GROUP 15
-  // ═══════════════════════════════════════════════════════════════
   { g: 15, w: "alienate", d: "make someone feel isolated and estranged", e: "His sharp comments alienated even his closest allies." },
   { g: 15, w: "apathy", d: "lack of interest or enthusiasm towards something", e: "Voter apathy was the campaign's biggest concern." },
   { g: 15, w: "apropos", d: "appropriate or relevant to the situation", e: "Her remark about transparency was apropos." },
@@ -511,10 +451,6 @@ const VOCAB = [
   { g: 15, w: "veracity", d: "conformity to truth or accuracy", e: "The veracity of the report has been questioned." },
   { g: 15, w: "virulent", d: "extremely hostile or malicious; intensely acrimonious", e: "She faced virulent criticism online." },
   { g: 15, w: "volatile", d: "likely to change unpredictably and quickly", e: "The market has been especially volatile this quarter." },
-
-  // ═══════════════════════════════════════════════════════════════
-  // GROUP 16
-  // ═══════════════════════════════════════════════════════════════
   { g: 16, w: "antedate", d: "occur before something in time", e: "Cave paintings antedate written language by millennia." },
   { g: 16, w: "banish", d: "expel from a place; get rid of", e: "The exile was banished for life." },
   { g: 16, w: "bridle", d: "control or restrain; or, show anger", e: "She bridled at the suggestion she was being unfair." },
@@ -545,10 +481,6 @@ const VOCAB = [
   { g: 16, w: "thorough", d: "careful and complete concerning every detail", e: "She did a thorough cleaning of the apartment." },
   { g: 16, w: "visionary", d: "showing foresight or imagination", e: "She was a visionary leader who saw what others missed." },
   { g: 16, w: "vociferous", d: "expressing opinions or feelings loudly and forcefully", e: "There was vociferous opposition from the neighborhood." },
-
-  // ═══════════════════════════════════════════════════════════════
-  // GROUP 17
-  // ═══════════════════════════════════════════════════════════════
   { g: 17, w: "acclaim", d: "praise with great approval; enthusiastic approval", e: "Her novel received widespread acclaim." },
   { g: 17, w: "ascertain", d: "find out or learn with certainty", e: "We need to ascertain the cause of the failure." },
   { g: 17, w: "assertive", d: "confident and direct in claiming one's rights", e: "Be more assertive when negotiating your salary." },
@@ -579,10 +511,6 @@ const VOCAB = [
   { g: 17, w: "tepid", d: "exhibiting little passion or eagerness; lukewarm", e: "The audience gave a tepid response to the proposal." },
   { g: 17, w: "upbraid", d: "criticize or scold severely", e: "She upbraided him for missing the deadline." },
   { g: 17, w: "vexation", d: "the state of being irritated or incensed", e: "Much to his vexation, the file was corrupted." },
-
-  // ═══════════════════════════════════════════════════════════════
-  // GROUP 18
-  // ═══════════════════════════════════════════════════════════════
   { g: 18, w: "abet", d: "assist or encourage, usually in wrongdoing", e: "She was charged with aiding and abetting the robbery." },
   { g: 18, w: "accessible", d: "clear; capable of being understood; easy to reach", e: "Her writing makes complex ideas accessible to general readers." },
   { g: 18, w: "acquisitive", d: "eager to acquire and possess things", e: "The acquisitive collector bought up every rare edition." },
@@ -613,10 +541,6 @@ const VOCAB = [
   { g: 18, w: "subordinate", d: "having a lower rank; less important", e: "Personal preferences are subordinate to team needs here." },
   { g: 18, w: "unseemly", d: "not proper or in good taste", e: "His outburst was unseemly at a funeral." },
   { g: 18, w: "veritable", d: "(emphasis word) true; genuine", e: "Her garden is a veritable jungle by August." },
-
-  // ═══════════════════════════════════════════════════════════════
-  // GROUP 19
-  // ═══════════════════════════════════════════════════════════════
   { g: 19, w: "acolyte", d: "a person who assists or follows another person or cause", e: "He gathered a group of devoted acolytes." },
   { g: 19, w: "anoint", d: "appoint or designate for a particular role or purpose", e: "She was anointed as the next leader." },
   { g: 19, w: "base", d: "lacking principles; morally wrong", e: "He stooped to base tactics to win." },
@@ -647,10 +571,6 @@ const VOCAB = [
   { g: 19, w: "temporal", d: "relating to time; worldly rather than spiritual", e: "Religious leaders sometimes hold temporal power." },
   { g: 19, w: "transitory", d: "not permanent; temporary", e: "The fame was transitory — gone within months." },
   { g: 19, w: "viable", d: "capable of working or succeeding; feasible", e: "It's the only viable solution under the budget." },
-
-  // ═══════════════════════════════════════════════════════════════
-  // GROUP 20
-  // ═══════════════════════════════════════════════════════════════
   { g: 20, w: "abreast", d: "informed or familiar about a particular topic", e: "She keeps abreast of changes in the industry." },
   { g: 20, w: "confound", d: "perplex or puzzle someone", e: "The results confounded the researchers." },
   { g: 20, w: "digression", d: "an aside that strays from the main subject", e: "His lecture was full of long digressions." },
@@ -681,10 +601,6 @@ const VOCAB = [
   { g: 20, w: "universal", d: "applicable or common to all situations", e: "The longing for connection is universal." },
   { g: 20, w: "vanquish", d: "defeat completely", e: "The champion vanquished all challengers." },
   { g: 20, w: "woeful", d: "very sad; very bad", e: "The team's performance was woeful that season." },
-
-  // ═══════════════════════════════════════════════════════════════
-  // GROUP 21
-  // ═══════════════════════════════════════════════════════════════
   { g: 21, w: "abject", d: "most unfortunate or miserable", e: "The proposal was an abject failure." },
   { g: 21, w: "amicable", d: "characterized by goodwill and friendliness", e: "They reached an amicable settlement." },
   { g: 21, w: "animosity", d: "strong hostility or resentment", e: "There's lingering animosity between the two camps." },
@@ -715,13 +631,8 @@ const VOCAB = [
   { g: 21, w: "resolute", d: "firmly determined or unwavering", e: "He was resolute in his decision to leave the firm." },
   { g: 21, w: "supple", d: "pliant, flexible, or easy to bend", e: "Yoga keeps her body supple." },
   { g: 21, w: "valor", d: "strength of mind in the face of danger; bravery", e: "He received a medal for valor in combat." },
-
-  // ═══════════════════════════════════════════════════════════════
-  // GROUP 22
-  // ═══════════════════════════════════════════════════════════════
   { g: 22, w: "arresting", d: "attracting attention or striking", e: "Her arresting blue eyes drew every photographer." },
   { g: 22, w: "chastise", d: "criticize harshly", e: "She chastised herself for forgetting the appointment." },
-  { g: 22, w: "cumbersome", d: "large, heavy, slow or complicated", e: "The old laptop was cumbersome to carry." },
   { g: 22, w: "economy", d: "frugal or effective use of resources or words", e: "He writes with great economy of phrase." },
   { g: 22, w: "elementary", d: "basic and fundamental", e: "He hadn't mastered even elementary chess strategy." },
   { g: 22, w: "embellish", d: "make more attractive by adding ornamentation; exaggerate", e: "She embellished the story with details that may not have been true." },
@@ -749,10 +660,6 @@ const VOCAB = [
   { g: 22, w: "tentative", d: "uncertain; subject to future change", e: "We have a tentative agreement on the price." },
   { g: 22, w: "unprecedented", d: "never before seen, done or experienced", e: "It was an unprecedented step in the company's history." },
   { g: 22, w: "vivacious", d: "lively and animated in spirit", e: "Her vivacious personality lit up the room." },
-
-  // ═══════════════════════════════════════════════════════════════
-  // GROUP 23
-  // ═══════════════════════════════════════════════════════════════
   { g: 23, w: "allusive", d: "making indirect references or hints", e: "Her allusive style assumes readers know the classics." },
   { g: 23, w: "astute", d: "having the ability to notice and understand things clearly", e: "He made an astute observation about the trend." },
   { g: 23, w: "commence", d: "begin or start", e: "The ceremony will commence at noon." },
@@ -783,10 +690,6 @@ const VOCAB = [
   { g: 23, w: "repercussion", d: "an unintended consequence of an event", e: "The decision had repercussions for years." },
   { g: 23, w: "replenish", d: "fill something up again", e: "Please replenish the supplies before tomorrow." },
   { g: 23, w: "vigilant", d: "keeping careful watch for dangers", e: "Remain vigilant when crossing busy streets." },
-
-  // ═══════════════════════════════════════════════════════════════
-  // GROUP 24
-  // ═══════════════════════════════════════════════════════════════
   { g: 24, w: "assail", d: "attack physically or verbally", e: "Critics assailed the report from all sides." },
   { g: 24, w: "benevolent", d: "showing kindness or goodwill", e: "The benevolent uncle paid for everyone's education." },
   { g: 24, w: "berate", d: "scold or criticize harshly", e: "The coach berated the team after the loss." },
@@ -817,10 +720,6 @@ const VOCAB = [
   { g: 24, w: "subsume", d: "include or contain something else", e: "These categories are subsumed under one heading." },
   { g: 24, w: "surmount", d: "overcome something, typically a challenge", e: "She surmounted every obstacle in her path." },
   { g: 24, w: "tangential", d: "only superficially relevant", e: "That point is tangential to the main argument." },
-
-  // ═══════════════════════════════════════════════════════════════
-  // GROUP 25
-  // ═══════════════════════════════════════════════════════════════
   { g: 25, w: "adept", d: "well skilled; completely versed", e: "She's adept at handling difficult clients." },
   { g: 25, w: "adverse", d: "unfavorable or opposed to one's interests", e: "We had to deal with adverse weather conditions." },
   { g: 25, w: "appropriate", d: "take something forcefully; or, suitable", e: "He was accused of appropriating funds." },
@@ -851,10 +750,6 @@ const VOCAB = [
   { g: 25, w: "vitality", d: "strength and energy", e: "The vitality of his ninety-year-old grandmother amazed everyone." },
   { g: 25, w: "whimsical", d: "playful or silly; unpredictable", e: "The garden had a whimsical, fairy-tale feel." },
   { g: 25, w: "yield", d: "produce or generate; or, give up or surrender", e: "The orchard yields tons of apples each fall." },
-
-  // ═══════════════════════════════════════════════════════════════
-  // GROUP 26
-  // ═══════════════════════════════════════════════════════════════
   { g: 26, w: "apprehension", d: "fearful anticipation or worry", e: "She felt apprehension about the upcoming exam." },
   { g: 26, w: "ardent", d: "full of passion and enthusiasm", e: "He is an ardent fan of jazz." },
   { g: 26, w: "axiomatic", d: "evident without proof; self-evident", e: "It's axiomatic that you can't please everyone." },
@@ -885,10 +780,6 @@ const VOCAB = [
   { g: 26, w: "tacit", d: "implied without being directly expressed", e: "There was a tacit agreement to keep things confidential." },
   { g: 26, w: "transcend", d: "pass beyond the limits of something", e: "Her music transcends genre." },
   { g: 26, w: "treatise", d: "a detailed written work on a subject", e: "He published a treatise on medieval economics." },
-
-  // ═══════════════════════════════════════════════════════════════
-  // GROUP 27
-  // ═══════════════════════════════════════════════════════════════
   { g: 27, w: "antagonize", d: "act in opposition to or provoke hostility from", e: "Don't antagonize him before the negotiation." },
   { g: 27, w: "barren", d: "incapable of producing offspring or fruit; unproductive", e: "Nothing grew on the barren slope." },
   { g: 27, w: "bombastic", d: "high-sounding but with little meaning", e: "His bombastic speech was full of empty phrases." },
@@ -919,10 +810,6 @@ const VOCAB = [
   { g: 27, w: "undercut", d: "undermine; weaken", e: "His comments undercut her authority in the meeting." },
   { g: 27, w: "wheedle", d: "attempt to persuade by flattery", e: "He wheedled an extra cookie from his grandmother." },
   { g: 27, w: "xenophobic", d: "showing a fear or hatred of foreigners", e: "The xenophobic rhetoric drove many to leave the country." },
-
-  // ═══════════════════════════════════════════════════════════════
-  // GROUP 28
-  // ═══════════════════════════════════════════════════════════════
   { g: 28, w: "abeyance", d: "suspension; temporary suppression", e: "The project was held in abeyance pending review." },
   { g: 28, w: "abstract", d: "in thought or concept but lacking physical existence", e: "Justice is an abstract concept we struggle to define." },
   { g: 28, w: "affront", d: "an open or intentional offense, slight, or insult", e: "His comment was an affront to her professionalism." },
@@ -953,10 +840,6 @@ const VOCAB = [
   { g: 28, w: "sophistry", d: "plausible yet fallacious argumentation", e: "His clever sophistry didn't disguise the weak case." },
   { g: 28, w: "substantiate", d: "verify something by supplying evidence", e: "Can you substantiate that claim?" },
   { g: 28, w: "wily", d: "sly, cunning, full of tricks", e: "The wily fox eluded the hunters for hours." },
-
-  // ═══════════════════════════════════════════════════════════════
-  // GROUP 29
-  // ═══════════════════════════════════════════════════════════════
   { g: 29, w: "abscond", d: "leave hurriedly and secretly, typically to avoid capture", e: "The treasurer absconded with the funds." },
   { g: 29, w: "apogee", d: "the peak or highest point of something", e: "His career reached its apogee in the late nineties." },
   { g: 29, w: "aspersion", d: "a critical or damaging remark", e: "She cast aspersions on his honesty." },
@@ -987,10 +870,6 @@ const VOCAB = [
   { g: 29, w: "prurient", d: "displaying or prompting an undue interest in sexual matters", e: "The tabloid's prurient interest in her private life upset her." },
   { g: 29, w: "sadistic", d: "taking pleasure in causing pain to others", e: "His sadistic teasing finally got him fired." },
   { g: 29, w: "zenith", d: "the point at which something attains its maximum power", e: "The empire was at its zenith in the third century." },
-
-  // ═══════════════════════════════════════════════════════════════
-  // GROUP 30
-  // ═══════════════════════════════════════════════════════════════
   { g: 30, w: "aberrant", d: "deviating from what is normal or expected", e: "The data showed an aberrant spike that day." },
   { g: 30, w: "abide", d: "tolerate, follow, or accept", e: "I can't abide rudeness." },
   { g: 30, w: "bravado", d: "a display of boldness or confidence, often feigned", e: "His bravado masked his nervousness." },
@@ -1021,10 +900,6 @@ const VOCAB = [
   { g: 30, w: "temerity", d: "reckless boldness or audacity", e: "He had the temerity to challenge the chair publicly." },
   { g: 30, w: "tenuous", d: "thin or weak", e: "The connection between the two events is tenuous." },
   { g: 30, w: "verve", d: "energy, enthusiasm, or vigor", e: "She performed the solo with great verve." },
-
-  // ═══════════════════════════════════════════════════════════════
-  // GROUP 31
-  // ═══════════════════════════════════════════════════════════════
   { g: 31, w: "abrogate", d: "formally cancel or do away with", e: "The treaty was abrogated by the new government." },
   { g: 31, w: "aghast", d: "shocked or horrified; struck with amazement", e: "She was aghast at the language he used." },
   { g: 31, w: "apprise", d: "inform, notify, or advise", e: "Please apprise me of any changes to the schedule." },
@@ -1055,10 +930,6 @@ const VOCAB = [
   { g: 31, w: "surfeit", d: "an excessive amount of something", e: "There's a surfeit of information online — and a dearth of wisdom." },
   { g: 31, w: "ulterior", d: "concealed, typically with a hidden motive", e: "I suspect he has an ulterior motive." },
   { g: 31, w: "voluble", d: "speaking a lot, with great ease", e: "Our voluble host kept the conversation going effortlessly." },
-
-  // ═══════════════════════════════════════════════════════════════
-  // GROUP 32
-  // ═══════════════════════════════════════════════════════════════
   { g: 32, w: "abstruse", d: "difficult to comprehend or understand", e: "The theory was too abstruse for casual readers." },
   { g: 32, w: "auxiliary", d: "supplementary or additional, often in support", e: "The auxiliary generator kicks in during outages." },
   { g: 32, w: "caricature", d: "exaggerate features for comedic or satirical effect", e: "The cartoon was a perfect caricature of the senator." },
@@ -1089,10 +960,6 @@ const VOCAB = [
   { g: 32, w: "turbid", d: "muddy or opaque; unclear or confused", e: "The river was turbid after the heavy rain." },
   { g: 32, w: "turgid", d: "swollen or bloated; overly complex", e: "His turgid prose lost most of the audience." },
   { g: 32, w: "vacuous", d: "lacking intelligence or thought", e: "Her vacuous remarks added nothing to the discussion." },
-
-  // ═══════════════════════════════════════════════════════════════
-  // GROUP 33
-  // ═══════════════════════════════════════════════════════════════
   { g: 33, w: "affluent", d: "wealthy; having an abundance of goods or riches", e: "The affluent suburb has the highest property values in the state." },
   { g: 33, w: "allegorical", d: "containing symbolic representation", e: "Animal Farm is an allegorical critique of revolution." },
   { g: 33, w: "allude", d: "refer to something indirectly or by suggestion", e: "She alluded to the conflict without naming anyone." },
@@ -1123,10 +990,6 @@ const VOCAB = [
   { g: 33, w: "token", d: "merely symbolic; done only for appearance", e: "His apology was just a token gesture." },
   { g: 33, w: "unravel", d: "clear from complication or difficulty", e: "The detectives slowly unraveled the mystery." },
   { g: 33, w: "withstand", d: "resist or endure something successfully", e: "The structure can withstand winds up to 150 mph." },
-
-  // ═══════════════════════════════════════════════════════════════
-  // GROUP 34
-  // ═══════════════════════════════════════════════════════════════
   { g: 34, w: "abrasive", d: "overly aggressive and causing irritation; or, rough enough to wear away surface", e: "His abrasive personality cost him allies." },
   { g: 34, w: "artful", d: "skillful at using unfair means; or, performed cleverly", e: "Her artful dodging of the question impressed reporters." },
   { g: 34, w: "avert", d: "prevent the occurrence of", e: "Quick action averted a major crisis." },
@@ -1157,10 +1020,6 @@ const VOCAB = [
   { g: 34, w: "prevail", d: "emerge victorious or dominant", e: "Reason eventually prevailed in the debate." },
   { g: 34, w: "proponent", d: "a supporter of an idea or cause", e: "She's a leading proponent of urban gardening." },
   { g: 34, w: "stipulate", d: "specify as a condition of an agreement", e: "The contract stipulates monthly payments." },
-
-  // ═══════════════════════════════════════════════════════════════
-  // GROUP 35
-  // ═══════════════════════════════════════════════════════════════
   { g: 35, w: "aplomb", d: "self-confidence or assurance, especially under pressure", e: "She handled the difficult interview with aplomb." },
   { g: 35, w: "apposite", d: "apt; appropriate in the circumstances", e: "His remarks were apposite to the occasion." },
   { g: 35, w: "beholden", d: "owing thanks; obligated to someone", e: "She didn't want to be beholden to anyone." },
@@ -1180,7 +1039,6 @@ const VOCAB = [
   { g: 35, w: "luminous", d: "emitting or reflecting light; brilliant", e: "Her luminous performance carried the film." },
   { g: 35, w: "meander", d: "wander aimlessly; (of a river) follow a winding course", e: "The trail meandered through the meadow." },
   { g: 35, w: "nuance", d: "a subtle difference in meaning or expression", e: "She caught every nuance of the speaker's tone." },
-  { g: 35, w: "obstinate", d: "stubborn and unyielding", e: "He was obstinate about not asking for directions." },
   { g: 35, w: "ostracize", d: "exclude from a group", e: "She was ostracized for speaking out." },
   { g: 35, w: "paramount", d: "more important than anything else", e: "Safety is paramount on every job site." },
   { g: 35, w: "pivotal", d: "of crucial importance; central", e: "Her testimony was pivotal in the case." },
@@ -1191,10 +1049,6 @@ const VOCAB = [
   { g: 35, w: "scrutinize", d: "examine closely and critically", e: "Investors scrutinized every line of the report." },
   { g: 35, w: "trite", d: "overused and lacking originality", e: "The closing line of the speech was unfortunately trite." },
   { g: 35, w: "vindicate", d: "clear of blame; show to be justified", e: "The new evidence vindicated her position." },
-
-  // ═══════════════════════════════════════════════════════════════
-  // GROUP 36
-  // ═══════════════════════════════════════════════════════════════
   { g: 36, w: "accord", d: "agreement or harmony; give recognition", e: "The two parties reached an accord on trade." },
   { g: 36, w: "ad hoc", d: "created for a specific purpose; improvised", e: "We formed an ad hoc committee to address the issue." },
   { g: 36, w: "adhere", d: "stick to; hold to (a belief or rule)", e: "All members must adhere to the code of conduct." },
@@ -1209,26 +1063,18 @@ const VOCAB = [
   { g: 36, w: "disconcerting", d: "unsettling; causing unease", e: "His silence was disconcerting." },
   { g: 36, w: "ensue", d: "happen as a consequence", e: "Chaos ensued after the power outage." },
   { g: 36, w: "exemplary", d: "serving as a desirable model; very good", e: "His behavior was exemplary throughout the trial." },
-  { g: 36, w: "fervid", d: "intensely passionate; fervent", e: "He spoke with fervid conviction." },
   { g: 36, w: "frugal", d: "sparing or economical with money or food", e: "She's frugal but never stingy." },
   { g: 36, w: "imbue", d: "inspire or permeate with a feeling or quality", e: "Her teaching imbued students with curiosity." },
-  { g: 36, w: "incessant", d: "continuing without pause or interruption", e: "The incessant rain ruined the picnic." },
   { g: 36, w: "innate", d: "existing from birth; inborn", e: "Curiosity seems innate in toddlers." },
   { g: 36, w: "insidious", d: "proceeding in a subtle way with harmful effects", e: "Disinformation is insidious — small lies, big consequences." },
-  { g: 36, w: "languish", d: "lose vitality; become weak", e: "The novel languished on his desk for a year." },
   { g: 36, w: "morass", d: "a complicated or confused situation", e: "The legal morass took years to resolve." },
   { g: 36, w: "novel", d: "new or unusual in an interesting way", e: "She had a novel approach to the old problem." },
-  { g: 36, w: "obscure", d: "not well-known; difficult to understand", e: "He cited an obscure 19th-century author." },
   { g: 36, w: "ostensible", d: "stated or appearing to be true, but not necessarily so", e: "His ostensible reason for the trip was business." },
   { g: 36, w: "palliate", d: "make less severe without removing the cause", e: "The medication palliated her symptoms." },
   { g: 36, w: "paucity", d: "the presence of something only in small quantities; scarcity", e: "There's a paucity of evidence to support the claim." },
   { g: 36, w: "redolent", d: "strongly reminiscent of; smelling strongly of", e: "The room was redolent of cinnamon and pine." },
   { g: 36, w: "rife", d: "of common occurrence; widespread", e: "Rumors were rife in the office." },
   { g: 36, w: "succinct", d: "briefly and clearly expressed", e: "Please make your answer as succinct as possible." },
-
-  // ═══════════════════════════════════════════════════════════════
-  // GROUP 37
-  // ═══════════════════════════════════════════════════════════════
   { g: 37, w: "attribute", d: "assign to a cause; a quality or feature", e: "Don't attribute the result to luck alone." },
   { g: 37, w: "calamitous", d: "disastrous; causing great damage", e: "The decision had calamitous consequences." },
   { g: 37, w: "censor", d: "suppress unacceptable content", e: "The film was censored before its release." },
@@ -1245,10 +1091,8 @@ const VOCAB = [
   { g: 37, w: "germane", d: "relevant to the matter at hand", e: "Stick to points germane to the case." },
   { g: 37, w: "imbibe", d: "absorb or drink in (ideas or liquid)", e: "She imbibed every detail of the manual." },
   { g: 37, w: "indelible", d: "impossible to remove or forget", e: "The trip made an indelible impression on her." },
-  { g: 37, w: "inundate", d: "overwhelm; flood", e: "Customer service was inundated with calls." },
   { g: 37, w: "laudatory", d: "expressing praise", e: "The introduction was laudatory but vague." },
   { g: 37, w: "legacy", d: "something handed down from the past", e: "Her legacy will outlast any award." },
-  { g: 37, w: "manifest", d: "clear or obvious; reveal", e: "Her talent was manifest from the first audition." },
   { g: 37, w: "obliterate", d: "destroy utterly; wipe out", e: "The fire obliterated the records." },
   { g: 37, w: "perpetual", d: "never ending or changing", e: "Some problems seem perpetual no matter what we try." },
   { g: 37, w: "perplex", d: "puzzle; cause to be confused", e: "The strange behavior perplexed the researchers." },
@@ -1256,12 +1100,10 @@ const VOCAB = [
   { g: 37, w: "pragmatic", d: "dealing with things sensibly and realistically", e: "She took a pragmatic approach to the budget." },
   { g: 37, w: "preempt", d: "take action to prevent; supersede", e: "He preempted her objection by addressing it first." },
   { g: 37, w: "redundant", d: "no longer needed; repeating the same thing", e: "The third paragraph is redundant." },
-  { g: 37, w: "relegate", d: "consign to an inferior position", e: "The team was relegated to a lower league." },
   { g: 37, w: "reverent", d: "feeling or showing deep respect", e: "She spoke in reverent tones about her mentor." },
   { g: 37, w: "succumb", d: "fail to resist; give in to", e: "He finally succumbed to the temptation of a nap." },
 ];
 
-// Group lookup helper
 function vocabByGroup(g) {
   return VOCAB.filter(v => v.g === g);
 }

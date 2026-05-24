@@ -123,7 +123,7 @@
 
   .tabs {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 6px;
     padding: 0.5rem 1.25rem 0;
     margin-bottom: 0.5rem;
@@ -133,9 +133,9 @@
     background: transparent;
     border: 1px solid var(--border);
     border-radius: var(--radius-sm);
-    padding: 12px 8px;
+    padding: 11px 4px;
     font-family: 'DM Sans', sans-serif;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 500;
     letter-spacing: 0.04em;
     text-transform: uppercase;
@@ -773,13 +773,218 @@
   /* Mobile tweaks */
   @media (max-width: 480px) {
     .header { padding: 1.25rem 1rem 0.75rem; }
-    .tabs { padding: 0.25rem 1rem 0; }
+    .tabs { padding: 0.25rem 1rem 0; gap: 4px; }
     .content { padding: 0.75rem 1rem 2rem; }
-    .tab { padding: 11px 4px; font-size: 11px; letter-spacing: 0.02em; }
+    .tab { padding: 10px 2px; font-size: 10px; letter-spacing: 0.02em; }
     .brand-title { font-size: 22px; }
     .brand-sub { font-size: 15px; }
     .face { padding: 1.25rem; }
   }
+  /* ═══════════════════════════════════════════════════════════
+     SORT GAME
+     ═══════════════════════════════════════════════════════════ */
+
+  /* Difficulty selector */
+  .diff-row { display: flex; flex-direction: column; gap: 8px; }
+  .diff-btn {
+    background: var(--bg);
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 12px 14px;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.15s;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .diff-btn:hover { border-color: var(--border-strong); }
+  .diff-btn.active {
+    background: var(--text);
+    border-color: var(--text);
+  }
+  .diff-label {
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--text);
+    margin-bottom: 2px;
+  }
+  .diff-btn.active .diff-label { color: var(--lime); }
+  .diff-meta { font-size: 12px; color: var(--muted); }
+  .diff-btn.active .diff-meta { color: rgba(200,245,66,0.7); }
+
+  /* Game header */
+  .game-hdr {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 4px;
+    margin-bottom: 12px;
+  }
+  .game-prog-text {
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .game-prog-text strong { color: var(--text); font-weight: 600; }
+
+  /* Word pool */
+  .word-pool-wrap {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 14px;
+    margin-bottom: 12px;
+    position: relative;
+  }
+  .word-pool-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--hint);
+    margin-bottom: 10px;
+  }
+  .word-pool {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    min-height: 44px;
+  }
+  .word-pool-empty {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: 14px;
+    color: var(--hint);
+    padding: 4px 0;
+  }
+
+  /* Word chips */
+  .word-chip {
+    display: inline-flex;
+    align-items: center;
+    background: var(--card);
+    border: 1.5px solid var(--border-strong);
+    border-radius: 20px;
+    padding: 8px 15px;
+    font-family: 'DM Serif Display', serif;
+    font-size: 15px;
+    color: var(--text);
+    cursor: grab;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: none;
+    transition: opacity 0.2s, transform 0.15s;
+    position: relative;
+  }
+  .word-chip:active { cursor: grabbing; }
+  .word-chip.dragging-source {
+    opacity: 0.3;
+    transform: scale(0.96);
+  }
+
+  /* Ghost (floating clone during drag) */
+  .drag-ghost {
+    position: fixed !important;
+    pointer-events: none !important;
+    z-index: 9999 !important;
+    background: var(--lime) !important;
+    border-color: var(--lime-dark) !important;
+    color: var(--lime-dark) !important;
+    transform: scale(1.1) rotate(2deg) !important;
+    box-shadow: 0 10px 28px rgba(0,0,0,0.2) !important;
+    font-family: 'DM Serif Display', serif !important;
+    font-size: 15px !important;
+    padding: 8px 15px !important;
+    border-radius: 20px !important;
+    border: 1.5px solid var(--lime-dark) !important;
+    white-space: nowrap !important;
+    transition: none !important;
+  }
+
+  /* Drop zones */
+  .drop-zone {
+    background: var(--card);
+    border: 2px dashed var(--border-strong);
+    border-radius: var(--radius);
+    padding: 14px;
+    margin-bottom: 10px;
+    transition: border-color 0.15s, background 0.15s, transform 0.1s;
+  }
+  .drop-zone.drag-over {
+    border-color: var(--lime-dark);
+    background: var(--lime-soft);
+    transform: scale(1.01);
+  }
+  .drop-zone.drop-correct {
+    border-color: var(--green);
+    background: var(--green-soft);
+  }
+  .drop-zone.drop-wrong {
+    border-color: var(--red);
+    background: var(--red-soft);
+  }
+
+  .drop-zone-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 18px;
+    margin-bottom: 3px;
+  }
+  .drop-zone-gist {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 12px;
+    line-height: 1.4;
+  }
+  .drop-zone-words {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    min-height: 28px;
+  }
+
+  /* Correctly placed words inside a zone */
+  .placed-word {
+    background: var(--green-soft);
+    color: var(--green);
+    border: 1px solid rgba(74,130,51,0.25);
+    border-radius: 16px;
+    padding: 5px 11px;
+    font-size: 13px;
+    font-family: 'DM Serif Display', serif;
+    animation: popIn 0.25s cubic-bezier(0.34,1.56,0.64,1);
+  }
+
+  @keyframes popIn {
+    from { transform: scale(0.5); opacity: 0; }
+    to   { transform: scale(1);   opacity: 1; }
+  }
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20%      { transform: translateX(-8px); }
+    40%      { transform: translateX(8px); }
+    60%      { transform: translateX(-5px); }
+    80%      { transform: translateX(5px); }
+  }
+  .shake { animation: shake 0.38s ease; }
+
+  /* History rows */
+  .hist-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 13px;
+  }
+  .hist-row:last-child { border-bottom: none; }
+  .hist-acc {
+    font-family: 'DM Serif Display', serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--green);
+  }
+
 </style>
 </head>
 <body>
@@ -803,9 +1008,10 @@
        TABS
        ═══════════════════════════════════════════════════════════ -->
   <nav class="tabs" role="tablist">
-    <button class="tab active" data-tab="flashcards" role="tab">Flashcards</button>
+    <button class="tab active" data-tab="flashcards" role="tab">Cards</button>
     <button class="tab" data-tab="clusters" role="tab">Clusters</button>
     <button class="tab" data-tab="quant" role="tab">Quant</button>
+    <button class="tab" data-tab="sort" role="tab">Sort</button>
   </nav>
 
   <!-- ═══════════════════════════════════════════════════════════
@@ -924,6 +1130,87 @@
         <input class="quant-search" id="quant-search" type="search" placeholder="Search formulas, concepts, traps…">
       </div>
       <div id="quant-list"></div>
+    </section>
+
+    <!-- ─────────── SORT GAME PANEL ─────────── -->
+    <section id="panel-sort" class="panel">
+
+      <!-- Setup screen -->
+      <div id="game-setup">
+        <div class="card">
+          <div class="card-title">Word Sort</div>
+          <div class="card-sub" style="margin-bottom:1.25rem;">Words appear in a pool. Drag each one into the correct meaning cluster. Wrong placements bounce back — keep going until every word is sorted.</div>
+
+          <div class="diff-row" id="diff-row">
+            <button class="diff-btn active" data-idx="0">
+              <div class="diff-label">Easy</div>
+              <div class="diff-meta">3 clusters · 3 words each · 9 total</div>
+            </button>
+            <button class="diff-btn" data-idx="1">
+              <div class="diff-label">Medium</div>
+              <div class="diff-meta">4 clusters · 4 words each · 16 total</div>
+            </button>
+            <button class="diff-btn" data-idx="2">
+              <div class="diff-label">Hard</div>
+              <div class="diff-meta">5 clusters · 5 words each · 25 total</div>
+            </button>
+          </div>
+
+          <button class="start-btn" id="game-start-btn" style="margin-top:1rem;">Start Game</button>
+        </div>
+
+        <!-- Recent scores -->
+        <div id="game-history-card" style="display:none;" class="card">
+          <div style="font-size:11px;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted);margin-bottom:10px;">Recent scores</div>
+          <div id="game-history-list"></div>
+        </div>
+      </div>
+
+      <!-- Active game -->
+      <div id="game-active" style="display:none;">
+        <div class="game-hdr">
+          <div>
+            <div class="game-prog-text" id="game-progress">0 / 0 sorted</div>
+            <div class="progress-bar" style="width:180px;margin-top:4px;"><div class="progress-bar-fill" id="game-prog-bar"></div></div>
+          </div>
+          <button class="session-exit" id="game-exit-btn">Exit</button>
+        </div>
+
+        <!-- Word pool -->
+        <div class="word-pool-wrap">
+          <div class="word-pool-label">DRAG WORDS BELOW ↓</div>
+          <div id="word-pool" class="word-pool"></div>
+        </div>
+
+        <!-- Drop zones -->
+        <div id="cluster-zones"></div>
+      </div>
+
+      <!-- Done screen -->
+      <div id="game-done" style="display:none;" class="session-done">
+        <div class="done-icon" id="game-done-icon">✓</div>
+        <div class="done-title" id="game-done-title">Well done!</div>
+        <div class="done-sub" id="game-done-sub">—</div>
+        <div class="done-stats" style="margin-bottom:1.75rem;">
+          <div>
+            <div class="done-stat-val" id="game-stat-correct">0</div>
+            <div class="done-stat-lbl">first try</div>
+          </div>
+          <div>
+            <div class="done-stat-val" id="game-stat-total">0</div>
+            <div class="done-stat-lbl">words</div>
+          </div>
+          <div>
+            <div class="done-stat-val" id="game-stat-mistakes">0</div>
+            <div class="done-stat-lbl">mistakes</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:8px;max-width:300px;margin:0 auto;">
+          <button class="start-btn" id="game-again-btn" style="flex:1;">Play Again</button>
+          <button class="start-btn" id="game-back-btn" style="flex:1;background:var(--surface);color:var(--text);">Back</button>
+        </div>
+      </div>
+
     </section>
 
   </main>
